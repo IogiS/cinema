@@ -1,0 +1,16 @@
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\bin\Debug\netcoreapp3.1\CinemaCRUD.exe
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\bin\Debug\netcoreapp3.1\CinemaCRUD.deps.json
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\bin\Debug\netcoreapp3.1\CinemaCRUD.runtimeconfig.json
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\bin\Debug\netcoreapp3.1\CinemaCRUD.runtimeconfig.dev.json
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\bin\Debug\netcoreapp3.1\CinemaCRUD.dll
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\bin\Debug\netcoreapp3.1\CinemaCRUD.pdb
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.csprojAssemblyReference.cache
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.Form1.resources
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.csproj.GenerateResource.cache
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.AssemblyInfoInputs.cache
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.AssemblyInfo.cs
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.csproj.CoreCompileInputs.cache
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.dll
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.pdb
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.genruntimeconfig.cache
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.ReservationForm.resources
