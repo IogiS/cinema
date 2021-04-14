@@ -5,7 +5,6 @@ C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD
 C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\bin\Debug\netcoreapp3.1\CinemaCRUD.dll
 C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\bin\Debug\netcoreapp3.1\CinemaCRUD.pdb
 C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.csprojAssemblyReference.cache
-C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.Form1.resources
 C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.csproj.GenerateResource.cache
 C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.AssemblyInfoInputs.cache
 C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.AssemblyInfo.cs
@@ -14,3 +13,7 @@ C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD
 C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.pdb
 C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.genruntimeconfig.cache
 C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.ReservationForm.resources
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.AddFilmForm.resources
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.CheckForm.resources
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.EditFilm.resources
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.MainForm.resources

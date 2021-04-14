@@ -10,26 +10,16 @@ using System.Windows.Forms;
 
 namespace CinemaCRUD
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
-            int j = 0;
-            List<Button> lColors = this.Controls.OfType<Button>().ToList();
-            for (int i = 0; i < lColors.Count; i++)
-            {
-                if (i%12 == 0)
-                    j = 0;
-            j++;
-            lColors[i].Text = j.ToString();
-
-            }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
 
@@ -45,6 +35,28 @@ namespace CinemaCRUD
 
             if (result == DialogResult.Yes)
                 ((Button)sender).BackColor = Color.Red;
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ReservationForm reservationForm = new ReservationForm();
+            Hide();
+            reservationForm.Show();
         }
     }
 }
