@@ -13,15 +13,23 @@ namespace CinemaCRUD
     {
         public ReservationForm()
         {
+            int row = 0;
             InitializeComponent();
             int j = 0;
             List<Button> lColors = this.Controls.OfType<Button>().ToList();
             for (int i = 0; i < lColors.Count; i++)
             {
+                if (lColors[i].TabIndex == 85)
+                    break;
                 if (i % 12 == 0)
+                {
                     j = 0;
+                    row+=100;
+                }
+                    
                 j++;
                 lColors[i].Text = j.ToString();
+                lColors[i].Name = (row + j).ToString();
 
             }
         }
