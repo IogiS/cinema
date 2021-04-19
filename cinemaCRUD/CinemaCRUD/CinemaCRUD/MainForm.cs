@@ -49,7 +49,9 @@ namespace CinemaCRUD
 
         private void menuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
         {
-
+            Hide();
+            AddFilmForm addFilmForm = new AddFilmForm();
+            addFilmForm.Show();
         }
 
         private void button1_Click_1(object sender, EventArgs e)

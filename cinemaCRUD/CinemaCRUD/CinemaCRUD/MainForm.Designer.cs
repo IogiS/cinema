@@ -684,7 +684,6 @@ namespace CinemaCRUD
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ColumnHeader film;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label3;

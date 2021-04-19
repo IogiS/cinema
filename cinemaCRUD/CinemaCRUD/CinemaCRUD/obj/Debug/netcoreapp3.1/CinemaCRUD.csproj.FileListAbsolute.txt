@@ -18,3 +18,5 @@ C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD
 C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.EditFilm.resources
 C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.MainForm.resources
 C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.Properties.Resources.resources
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\manik\OneDrive\Documents\GitHub\cinema\cinemaCRUD\CinemaCRUD\CinemaCRUD\obj\Debug\netcoreapp3.1\CinemaCRUD.csproj.CopyComplete
