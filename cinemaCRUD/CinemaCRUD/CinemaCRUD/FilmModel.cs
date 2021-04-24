@@ -11,7 +11,7 @@ namespace CinemaCRUD
         public string Genre { get; set; }
         public string Director { get; set; }
         public string PathToPoster { get; set; }
-        public List<int> IDSession { get; set; }
+        public List<string> Session { get; set; }
 
     }
 }

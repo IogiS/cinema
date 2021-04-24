@@ -9,10 +9,10 @@ namespace CinemaCRUD
     public class FilmController
     {
         public List<string> films = new List<string>();
-        public void Add(string Name, string Genre, string AgeRating, string Director, string description, List<int> session,string pathToPoster)
+        public void Add(string Name, string Genre, string AgeRating, string Director, string description, List<string> session,string pathToPoster)
         {
             films.Clear();
-            FilmModel film = new FilmModel() { Name = Name, Genre = Genre, AgeRating = AgeRating, Director = Director, Description = description , IDSession = session, PathToPoster = pathToPoster };
+            FilmModel film = new FilmModel() { Name = Name, Genre = Genre, AgeRating = AgeRating, Director = Director, Description = description , Session = session, PathToPoster = pathToPoster };
             films.Add(JsonConvert.SerializeObject(film));
             FileWorker.saveToFile(films, FileWorker.pathToDesktopFilms);
 

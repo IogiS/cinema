@@ -8,6 +8,7 @@ namespace CinemaCRUD
     public static class FileWorker
     {
         public static string pathToDesktopFilms { get; } = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\Films.json";
+        public static string pathToSession { get; } = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\Sessions.json";
         public static void saveToFile(List<string> text, string writePath)
         {
             openStreams("save", writePath, text);
