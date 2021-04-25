@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using CinemaCRUD.Controller;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ namespace CinemaCRUD
     public partial class CheckForm : Form
     {
         static public Dictionary<string, string> Check = new Dictionary<string, string>();
-        public List<string> checks = new List<string>();
+        CheckController checkController = new CheckController();
         private List<int> rows = new List<int>();
         private List<int> seats = new List<int>();
         public CheckForm()
@@ -31,8 +32,9 @@ namespace CinemaCRUD
 
             }
 
-            for (int i = 0; i < ltext.Count - 1; i++)
+            for (int i = 0; i < ltext.Count ; i++)
             {
+                var count = 0;
                 if (ltext[i].Name == "textBox5")
                 {
                     ltext[i].Text = CalculateTheMount(false, 0.0).ToString();
@@ -42,18 +44,31 @@ namespace CinemaCRUD
                 {
                     foreach (var item in rows)
                     {
-                        ltext[i].Text += item.ToString() + ",";
+                        ltext[i].Text += item.ToString() ;
+                        if (!(rows.Count - count == 1))
+                            ltext[i].Text += ",";
+                        count++;
                     }
                 }
                 else if (ltext[i].Name == "textBox4")
                 {
+                    count = 0;
                     foreach (var item in seats)
                     {
-                        ltext[i].Text += item.ToString() + ",";
+                        ltext[i].Text += item.ToString();
+                        if (!(rows.Count - count == 1))
+                            ltext[i].Text += ",";
+                        count++;
                     }
                 }
-                else
-                    ltext[i].Text = Check.Values.ToArray()[Check.Values.Count - i];
+                else if (ltext[i].Name == "textBox2")
+                {
+                    ltext[i].Text = Check.Values.ToArray()[0];
+                }
+                if (ltext[i].Name == "textBox1")
+                {
+                    ltext[i].Text = Check.Values.ToArray()[1];
+                }
 
 
             }
@@ -62,18 +77,11 @@ namespace CinemaCRUD
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Add();
+            checkController.Add(textBox1.Text, textBox4.Text, textBox3.Text, int.Parse(textBox5.Text), textBox2.Text);
         }
 
 
-        public void Add(string Name, string seats, string rows, int price, string session)
-        {
-            checks.Clear();
-            CheckModel check = new CheckModel() { Name = Name, Seats = seats, Rows = rows, Session = session, Price = price };
-            checks.Add(JsonConvert.SerializeObject(check));
-            FileWorker.saveToFile(checks, FileWorker.pathToDesktopFilms);
-
-        }
+        
 
         private void CheckForm_Load(object sender, EventArgs e)
         {

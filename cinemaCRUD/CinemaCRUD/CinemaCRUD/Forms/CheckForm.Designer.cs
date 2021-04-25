@@ -153,7 +153,6 @@ namespace CinemaCRUD
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Enabled = false;
             this.Name = "CheckForm";
             this.Text = "CheckForm";
             this.Load += new System.EventHandler(this.CheckForm_Load);
