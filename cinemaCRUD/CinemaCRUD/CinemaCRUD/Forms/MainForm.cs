@@ -13,6 +13,8 @@ namespace CinemaCRUD
 {
     public partial class MainForm : Form
     {
+         public static string Film { get; set; }
+         public static string Time { get; set; }
         FilmController filmController;
         SessionController sessionController;
         public List<string> films { get; set; }
@@ -63,6 +65,8 @@ namespace CinemaCRUD
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            CheckForm.Check.Add("Film", comboBox1.Text);
+            CheckForm.Check.Add("Time", comboBox2.Text);
             ReservationForm reservationForm = new ReservationForm();
             Hide();
             reservationForm.Show();
@@ -110,13 +114,22 @@ namespace CinemaCRUD
                 for (int j = 0; j < sessions.Count; j++)
                 {
                     var sb = JsonConvert.DeserializeObject<SessionModel>(sessions[j]);
-                    //if (s.Session == sb.timeSession.ToString())
-                    //{
-                    //    comboBox1.Items.Add(sb.timeSession.TimeOfDay);
-                    //}
-                                
+                for (int i = 0; i < s.Session.Count; i++)
+                {
+                    if (s.Session[i] == sb.timeSession.ToString())
+                    {
+                        comboBox1.Items.Add(sb.timeSession.TimeOfDay);
+                    }
                 }
+
+
+            }
             
+            
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
             
         }
     }

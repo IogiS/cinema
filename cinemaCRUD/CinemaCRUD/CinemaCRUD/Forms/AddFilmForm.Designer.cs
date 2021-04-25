@@ -29,7 +29,7 @@ namespace CinemaCRUD
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -114,7 +114,7 @@ namespace CinemaCRUD
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(362, 182);
+            this.button2.Location = new System.Drawing.Point(358, 197);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 53);
             this.button2.TabIndex = 10;
@@ -179,6 +179,7 @@ namespace CinemaCRUD
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(32, 263);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(549, 265);
@@ -192,14 +193,14 @@ namespace CinemaCRUD
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.Location = new System.Drawing.Point(623, 361);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 17);
+            this.label7.Size = new System.Drawing.Size(159, 17);
             this.label7.TabIndex = 23;
-            this.label7.Text = "Выберите время";
+            this.label7.Text = "Выберите время и дату";
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(623, 453);
+            this.button3.Location = new System.Drawing.Point(636, 460);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(136, 53);
             this.button3.TabIndex = 19;
@@ -236,9 +237,9 @@ namespace CinemaCRUD
             // 
             // Column1
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.NullValue = "false";
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.NullValue = "false";
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column1.FalseValue = "false";
             this.Column1.HeaderText = "Column1";
             this.Column1.Name = "Column1";
@@ -269,6 +270,7 @@ namespace CinemaCRUD
             this.Controls.Add(this.label1);
             this.Name = "AddFilmForm";
             this.Text = "AddFilmForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddFilmForm_FormClosing);
             this.Load += new System.EventHandler(this.AddFilmForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -12,6 +12,7 @@ namespace CinemaCRUD
         public List<string> newSessions = new List<string> { };
         FilmController filmController;
         SessionController sessionController;
+
         public AddFilmForm()
         {
             InitializeComponent();
@@ -35,40 +36,48 @@ namespace CinemaCRUD
 
         private void button1_Click(object sender, EventArgs e)
         {
-            sessions = sessionController.Shows(FileWorker.pathToSession);
-
-            for (int i = 0; i < dataGridView1.RowCount; i++)
+            try
             {
-                for (int j = 0; j < sessions.Count; j++)
-                {
-                    var s = JsonConvert.DeserializeObject<SessionModel>(sessions[j]);
-                    if ((bool)dataGridView1.Rows[i].Cells[1].Value)
+
+                sessions = sessionController.Shows(FileWorker.pathToSession);
+
+
+                    for (int j = 0; j < sessions.Count; j++)
                     {
+                        var s = JsonConvert.DeserializeObject<SessionModel>(sessions[j]);
+                        if ((bool)dataGridView1.Rows[j].Cells[1].Value)
+                        {
 
-                        var a = s.timeSession.ToString();
-                        newSessions.Add(a);
-                    }
+                            var a = s.timeSession.ToString();
+                            newSessions.Add(a);
+                            continue;
+                        }
 
 
+                    
                 }
-            }
 
-            int err = 0;
-            foreach (Control c in Controls)
-            {
-                if (c is TextBox)
+                int err = 0;
+                foreach (Control c in Controls)
                 {
-                    if (string.IsNullOrEmpty((c as TextBox).Text)) err++;
+                    if (c is TextBox)
+                    {
+                        if (string.IsNullOrEmpty((c as TextBox).Text)) err++;
+                    }
+                }
+                if (err > 0)
+                    MessageBox.Show($"Неправильно заполнены поля ({err})");
+                else
+                {
+                    filmController.Add(textBox1.Text, comboBox2.Text, textBox4.Text, textBox3.Text, textBox2.Text, newSessions, path);
                 }
             }
-            if (err > 0)
-                MessageBox.Show($"Неправильно заполнены поля ({err})");
-            else
+            catch (Exception ex)
             {
-                filmController.Add(textBox1.Text, comboBox2.Text, textBox4.Text, textBox3.Text, textBox2.Text, newSessions, path);
+                MessageBox.Show(ex.Message);
             }
-            
-       }
+
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -116,10 +125,13 @@ namespace CinemaCRUD
 
             }
             var a  = dataGridView1.Rows[0].Cells[1].Value;
-
-
-
         }
 
+        private void AddFilmForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Hide();
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
+        }
     }
 }
