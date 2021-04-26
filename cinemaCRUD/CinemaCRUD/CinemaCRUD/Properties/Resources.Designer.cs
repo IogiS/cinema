@@ -63,6 +63,16 @@ namespace CinemaCRUD.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_semicircle_computer_icons_circle_shape_rim {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-semicircle-computer-icons-circle-shape-rim", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Screenshot_1 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot_1", resourceCulture);

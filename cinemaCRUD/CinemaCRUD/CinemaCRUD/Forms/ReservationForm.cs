@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CinemaCRUD.Controller;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,12 +13,14 @@ namespace CinemaCRUD
 {
     public partial class ReservationForm : Form
     {
+        CheckController checkController;
         int numberOfTicket = 0;
         public ReservationForm()
         {
             
             int row = 0;
             InitializeComponent();
+            checkController = new CheckController();
             int j = 0;
             List<Button> lColors = Controls.OfType<Button>().ToList();
             for (int i = 0; i < lColors.Count; i++)
@@ -34,9 +38,10 @@ namespace CinemaCRUD
                 lColors[i].Name = (row + j).ToString();
 
             }
-
+            
             label1.Text = CheckForm.Check["Time"];
             label2.Text = CheckForm.Check["Film"];
+            reservate();
         }
 
         private void ReservationForm_Load(object sender, EventArgs e)
@@ -72,15 +77,45 @@ namespace CinemaCRUD
 
         void reservate()
         {
-
+            var a = checkController.Shows(FileWorker.pathToChecks);
+            for (int i = 0; i < a.Count; i++)
+            {
+                var s = JsonConvert.DeserializeObject<CheckModel>(a[i]);
+                if (s.Name == label1.Text && s.Session == label2.Text)
+                {
+                    List<Button> lColors = Controls.OfType<Button>().ToList();
+                    for (int j = 0; j < lColors.Count; j++)
+                    {
+                        for (int k = 0; k < s.Rows.Split(',').Count(); k++)
+                        {
+                            var b = (int.Parse(s.Rows.Split(',')[k]) * 100 + int.Parse(s.Seats.Split(',')[k])).ToString();
+                            if (lColors[j].Name == b)
+                            {
+                                lColors[j].Enabled = false;
+                                lColors[j].Text = "";
+                            }
+                        }
+                    }
+                }
+            }
+            
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Hide();
-            CheckForm checkForm = new CheckForm();
-            checkForm.Show();
+            if (!CheckForm.Check.ContainsKey("Row1") || !CheckForm.Check.ContainsKey("Seat1"))
+            {
+                MessageBox.Show("Вы не забронировали ни одного места!","ОшибОчка");
+            }
+            else
+            {
+                Hide();
+                CheckForm checkForm = new CheckForm();
+                checkForm.Show();
+            }
+           
         }
+
     }
 }

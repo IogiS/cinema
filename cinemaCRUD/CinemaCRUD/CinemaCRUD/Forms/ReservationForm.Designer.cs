@@ -29,6 +29,7 @@ namespace CinemaCRUD
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReservationForm));
             this.button98 = new System.Windows.Forms.Button();
             this.button75 = new System.Windows.Forms.Button();
             this.button76 = new System.Windows.Forms.Button();
@@ -113,6 +114,9 @@ namespace CinemaCRUD
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button98
@@ -841,7 +845,7 @@ namespace CinemaCRUD
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(328, 423);
+            this.button1.Location = new System.Drawing.Point(328, 595);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 34);
             this.button1.TabIndex = 85;
@@ -873,7 +877,7 @@ namespace CinemaCRUD
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(638, 161);
+            this.label3.Location = new System.Drawing.Point(638, 296);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(173, 22);
             this.label3.TabIndex = 172;
@@ -1037,7 +1041,7 @@ namespace CinemaCRUD
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(638, 294);
+            this.label5.Location = new System.Drawing.Point(638, 160);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(173, 22);
             this.label5.TabIndex = 174;
@@ -1103,11 +1107,33 @@ namespace CinemaCRUD
             this.label11.TabIndex = 180;
             this.label11.Text = "Ряд 6";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(73, 418);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(649, 132);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 181;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(353, 367);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(72, 22);
+            this.label12.TabIndex = 182;
+            this.label12.Text = "Экран";
+            // 
             // ReservationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 515);
+            this.ClientSize = new System.Drawing.Size(891, 664);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -1195,6 +1221,7 @@ namespace CinemaCRUD
             this.Name = "ReservationForm";
             this.Text = "ReservationForm";
             this.Load += new System.EventHandler(this.ReservationForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1285,5 +1312,7 @@ namespace CinemaCRUD
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label12;
     }
 }

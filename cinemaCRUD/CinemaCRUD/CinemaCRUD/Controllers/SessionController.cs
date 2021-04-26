@@ -17,7 +17,30 @@ namespace CinemaCRUD
             FileWorker.saveToFile(sessions, FileWorker.pathToSession);
 
         }
+        public void Delete(DateTime dateTime, string writePath)
+        {
+            sessions.Clear();
+            string[] arStr = File.ReadAllLines(writePath);
+            using (FileStream fs = new FileStream(writePath, FileMode.Open))
+            {
 
+                using (StreamReader r = new StreamReader(fs, Encoding.Default))
+                {
+                    for (int i = 0; i < arStr.Length; i++)
+                    {
+                        var film = JsonConvert.DeserializeObject<SessionModel>(arStr[i]);
+                        if (film == null)
+                            continue;
+                        else if (dateTime == film.timeSession)
+                            continue;
+
+                        sessions.Add(JsonConvert.SerializeObject(film));
+                    }
+                }
+
+                FileWorker.editFromFile(sessions, writePath);
+            }
+        }
         public List<string> Shows(string writePath)
         {
             using (FileStream fs = new FileStream(writePath, FileMode.Open))

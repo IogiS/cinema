@@ -29,7 +29,7 @@ namespace CinemaCRUD
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -215,7 +215,7 @@ namespace CinemaCRUD
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(183, 23);
             this.dateTimePicker1.TabIndex = 24;
-            this.dateTimePicker1.Value = new System.DateTime(2021, 4, 24, 17, 47, 0, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2021, 4, 26, 14, 14, 13, 0);
             // 
             // dataGridView1
             // 
@@ -237,9 +237,9 @@ namespace CinemaCRUD
             // 
             // Column1
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.NullValue = "false";
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = "false";
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column1.FalseValue = "false";
             this.Column1.HeaderText = "Column1";
             this.Column1.Name = "Column1";

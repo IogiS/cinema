@@ -507,22 +507,22 @@ namespace CinemaCRUD
             this.toolStripMenuItem2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.ShowItemToolTips = true;
             this.menuStrip1.Size = new System.Drawing.Size(508, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked_1);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(112, 20);
-            this.toolStripMenuItem1.Text = "Добавить фильм";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(182, 20);
+            this.toolStripMenuItem1.Text = "Добавить фильм и/или показ";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(107, 20);
-            this.toolStripMenuItem2.Text = "Изменить показ";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(198, 20);
+            this.toolStripMenuItem2.Text = "Редактировать фильм или показ";
             // 
             // imageList1
             // 

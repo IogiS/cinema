@@ -19,6 +19,9 @@ namespace CinemaCRUD
             filmController = new FilmController();
             sessionController = new SessionController();
             initializeCombo();
+            dateTimePicker1.CustomFormat = "dd/MM/yyyy" + " HH:mm:ss";
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.Value = DateTime.Now;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -83,22 +86,11 @@ namespace CinemaCRUD
         {
             try
             {
-                int err = 0;
-                foreach (Control c in Controls)
-                {
-                    if (c is TextBox)
-                    {
-                        if (string.IsNullOrEmpty((c as TextBox).Text)) err++;
-                    }
-                }
-                if (err > 0)
-                    MessageBox.Show($"Неправильно заполнены поля ({err})");
-                else
-                {
+                
                     // необходимые действия
                     sessionController.Add(dateTimePicker1.Value);
                     MessageBox.Show("Сеанс добавлен успешно!", "Успешно");
-                }
+                
             }
             catch (Exception ex)
             {

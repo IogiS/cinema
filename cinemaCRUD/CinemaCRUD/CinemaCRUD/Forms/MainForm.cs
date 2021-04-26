@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using CinemaCRUD.Forms;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,8 @@ namespace CinemaCRUD
             filmController = new FilmController();
             sessionController = new SessionController();
             initializeCombo();
+            toolStripMenuItem1.Click += menuStrip1_ItemClicked_1;
+            toolStripMenuItem2.Click += menuStrip2_ItemClicked_2;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -34,16 +37,7 @@ namespace CinemaCRUD
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string place = ((Button)sender).Text;
-            DialogResult result = MessageBox.Show(
-            "Окрасить кнопку в красный цвет?",
-            "Сообщение",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Information,
-            MessageBoxDefaultButton.Button1);
-
-            if (result == DialogResult.Yes)
-                ((Button)sender).BackColor = Color.Red;
+           
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -56,8 +50,9 @@ namespace CinemaCRUD
 
         }
 
-        private void menuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
+        private void menuStrip1_ItemClicked_1(object sender, EventArgs e)
         {
+
             Hide();
             AddFilmForm addFilmForm = new AddFilmForm();
             addFilmForm.Show();
@@ -65,11 +60,25 @@ namespace CinemaCRUD
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            CheckForm.Check.Add("Film", comboBox1.Text);
-            CheckForm.Check.Add("Time", comboBox2.Text);
-            ReservationForm reservationForm = new ReservationForm();
-            Hide();
-            reservationForm.Show();
+            int err = 0;
+            foreach (Control c in Controls)
+            {
+                if (c is ComboBox)
+                {
+                    if (string.IsNullOrEmpty((c as ComboBox).Text)) err++;
+                }
+            }
+            if (err > 0)
+                MessageBox.Show($"Не выбраны поля ({err})");
+            else
+            {
+                CheckForm.Check.Add("Film", comboBox1.Text);
+                CheckForm.Check.Add("Time", comboBox2.Text);
+                ReservationForm reservationForm = new ReservationForm();
+                Hide();
+                reservationForm.Show();
+            }
+            
         }
         public void initializeCombo()
         {
@@ -109,28 +118,42 @@ namespace CinemaCRUD
 
         void checkCompability(int index)
         {
+            try
+            {
                 comboBox1.Items.Clear();
                 var s = JsonConvert.DeserializeObject<FilmModel>(films[index]);
                 for (int j = 0; j < sessions.Count; j++)
                 {
                     var sb = JsonConvert.DeserializeObject<SessionModel>(sessions[j]);
-                for (int i = 0; i < s.Session.Count; i++)
-                {
-                    if (s.Session[i] == sb.timeSession.ToString())
+                    if (s.Session != null)
                     {
-                        comboBox1.Items.Add(sb.timeSession.TimeOfDay);
+                        for (int i = 0; i < s.Session.Count; i++)
+                        {
+                            if (s.Session[i] == sb.timeSession.ToString())
+                            {
+                                comboBox1.Items.Add(sb.timeSession);
+                            }
+                        }
                     }
+                    else { throw new Exception("Для выбранного фильма нет сеансов"); }
                 }
-
-
             }
-            
-            
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             
+        }
+
+        private void menuStrip2_ItemClicked_2(object sender, EventArgs e)
+        {
+            Hide();
+            EditForm editForm = new EditForm();
+            editForm.Show();
         }
     }
 }
