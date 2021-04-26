@@ -75,7 +75,7 @@ namespace CinemaCRUD
         }
         public List<string> Shows(string writePath)
         {
-            using (FileStream fs = new FileStream(writePath, FileMode.Open))
+            using (FileStream fs = new FileStream(writePath, FileMode.OpenOrCreate))
             {
                 using (StreamReader r = new StreamReader(fs, Encoding.Default))
                 {

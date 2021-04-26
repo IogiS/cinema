@@ -90,7 +90,7 @@ namespace CinemaCRUD
                     // необходимые действия
                     sessionController.Add(dateTimePicker1.Value);
                     MessageBox.Show("Сеанс добавлен успешно!", "Успешно");
-                
+                    initializeCombo();
             }
             catch (Exception ex)
             {
@@ -116,7 +116,8 @@ namespace CinemaCRUD
                 dataGridView1.Rows[i].Cells[1].Value = false;
 
             }
-            var a  = dataGridView1.Rows[0].Cells[1].Value;
+
+            
         }
 
         private void AddFilmForm_FormClosing(object sender, FormClosingEventArgs e)

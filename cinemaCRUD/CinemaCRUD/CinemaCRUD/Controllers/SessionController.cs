@@ -31,7 +31,7 @@ namespace CinemaCRUD
                         var film = JsonConvert.DeserializeObject<SessionModel>(arStr[i]);
                         if (film == null)
                             continue;
-                        else if (dateTime == film.timeSession)
+                        else if (dateTime.ToString() == film.timeSession.ToString())
                             continue;
 
                         sessions.Add(JsonConvert.SerializeObject(film));
@@ -43,7 +43,7 @@ namespace CinemaCRUD
         }
         public List<string> Shows(string writePath)
         {
-            using (FileStream fs = new FileStream(writePath, FileMode.Open))
+            using (FileStream fs = new FileStream(writePath, FileMode.OpenOrCreate))
             {
                 using (StreamReader r = new StreamReader(fs, Encoding.Default))
                 {

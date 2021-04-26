@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -73,7 +72,7 @@ namespace CinemaCRUD.Controller
         }
         public List<string> Shows(string writePath)
         {
-            using (FileStream fs = new FileStream(writePath, FileMode.Open))
+            using (FileStream fs = new FileStream(writePath, FileMode.OpenOrCreate))
             {
                 using (StreamReader r = new StreamReader(fs, Encoding.Default))
                 {

@@ -52,7 +52,6 @@ namespace CinemaCRUD.Forms
                 dataGridView1.Rows[i].Cells[1].Value = false;
             }
 
-            var a = dataGridView1.Rows[0].Cells[1].Value;
         }
 
         private void EditForm_Load(object sender, EventArgs e)
