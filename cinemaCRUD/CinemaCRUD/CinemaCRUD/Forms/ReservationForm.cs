@@ -18,9 +18,14 @@ namespace CinemaCRUD
         public ReservationForm()
         {
             
-            int row = 0;
+            
             InitializeComponent();
             checkController = new CheckController();
+            ChangePlaces();
+        }
+        void ChangePlaces()
+        {
+            int row = 0;
             int j = 0;
             List<Button> lColors = Controls.OfType<Button>().ToList();
             for (int i = 0; i < lColors.Count; i++)
@@ -38,12 +43,11 @@ namespace CinemaCRUD
                 lColors[i].Name = (row + j).ToString();
 
             }
-            
+
             label1.Text = CheckForm.Check["Time"];
             label2.Text = CheckForm.Check["Film"];
-            reservate();
+            Reservate();
         }
-
         private void ReservationForm_Load(object sender, EventArgs e)
         {
 
@@ -75,7 +79,7 @@ namespace CinemaCRUD
 
         }
 
-        void reservate()
+        void Reservate()
         {
             var a = checkController.Shows(FileWorker.pathToChecks);
             for (int i = 0; i < a.Count; i++)

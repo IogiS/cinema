@@ -60,6 +60,20 @@ namespace CinemaCRUD
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            if (NotNullFields())
+            {
+                CheckForm.Check.Add("Film", comboBox1.Text);
+                CheckForm.Check.Add("Time", comboBox2.Text);
+                ReservationForm reservationForm = new ReservationForm();
+                Hide();
+                reservationForm.Show();
+            }
+               
+            
+            
+        }
+
+        bool NotNullFields() {
             int err = 0;
             foreach (Control c in Controls)
             {
@@ -69,16 +83,12 @@ namespace CinemaCRUD
                 }
             }
             if (err > 0)
-                MessageBox.Show($"Не выбраны поля ({err})");
-            else
             {
-                CheckForm.Check.Add("Film", comboBox1.Text);
-                CheckForm.Check.Add("Time", comboBox2.Text);
-                ReservationForm reservationForm = new ReservationForm();
-                Hide();
-                reservationForm.Show();
+                MessageBox.Show($"Не выбраны поля ({err})");
+                return false;
             }
-            
+            else
+                return true;
         }
         public void initializeCombo()
         {
